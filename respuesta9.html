@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Respuesta 9</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+  /*Escriba una función que tomará un array de números almacenados 
+  y encontrará el segundo número más bajo y el segundo más grande, respectivamente.*/
+
+function SegundoNumeroAlto(cadena)
+{
+    var numerobajo = Math.min(...cadena);
+    var numeroalto = Math.max(...cadena);
+    for(var x = 0; x<cadena.length; x++)
+    {
+        if(cadena[x]<numeroalto && cadena[x]>numerobajo)
+        {
+            numerobajo = cadena[x];
+        }        
+    }
+    return numerobajo;
+}
+
+    
+function SegundoNumeroBajo()
+{
+    var numerobajo = Math.min(...cadena);
+    var numeroalto = Math.max(...cadena);
+    for(var x = 0; x<cadena.length; x++)
+    {
+        if(cadena[x]<numeroalto && cadena[x]>numerobajo)
+        {
+            numeroalto = cadena[x];
+        }        
+    }
+    return numeroalto;
+}
+
+var cadena = [20, 33, 5, 17, 103, 56];
+
+document.write("Los números son: "+cadena+"<br>");
+document.write("El segundo número más alto es: "+SegundoNumeroAlto(cadena)+"<br>");
+document.write("El segundo número más bajo es: "+SegundoNumeroBajo(cadena));
+
+/*Sé que seguramente no es lo que se pide en la consigna, pero estuve mucho tiempo buscando la manera
+de que una sola función me devuelva dos resultados distintos y sólo lograba que me devuelva uno de 
+forma correcta, así que tuve que separarla en dos funciones distintas.
+Igualmente voy a seguir buscando la manera de hacer que funcione.*/
+  
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Respuesta 7</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+  /*Escriba una función que acepte una cadena como parámetro
+  y encuentre la palabra más larga dentro de la cadena.*/
+
+  function Palabra(frase)
+{
+    var palabramayor = "";
+    var palabras = frase.split(" ");
+    palabras.forEach(function(palabra) {
+        if(palabra.length>palabramayor.length)
+        {
+            palabramayor = palabra;
+        }
+    });
+
+    return palabramayor;    
+}
+
+var frase = prompt("Ingrese una frase:");
+
+document.write(Palabra(frase));
+  
+</script>
+
+</body>
+</html>

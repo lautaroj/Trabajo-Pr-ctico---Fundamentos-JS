@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Respuesta 3</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+  /*Partiendo de la siguiente tabla de alumnos del curso de Inglés y sus calificaciones promedio,
+  establecer y mostrar la calificación correspondiente.*/
+  function Alumno(nombre, promedio)
+  {
+    for(var x=0; x<nombre.length; x++)
+    {
+        if(promedio[x]<60)
+        {
+            document.write(nombre[x]+" tiene calificación F<br>");
+        }
+        else if(promedio[x]>=60 && promedio[x]<70)
+        {
+            document.write(nombre[x]+" tiene calificación D<br>");
+        }
+        else if(promedio[x]>=70 && promedio[x]<80)
+        {
+            document.write(nombre[x]+" tiene calificación C<br>");
+        }
+        else if(promedio[x]>=80 && promedio[x]<90)
+        {
+            document.write(nombre[x]+" tiene calificación B<br>");
+        }
+        else
+        {
+            document.write(nombre[x]+" tiene calificación A<br>");
+        }
+    }
+
+  }
+  var nombre = new Array(5);
+  nombre[0]='David';
+  nombre[1]='Juan';
+  nombre[2]='Marcelo';
+  nombre[3]='Carlos';
+  nombre[4]='Tomas';
+
+  var promedio = new Array(5);
+  promedio[0]=80;
+  promedio[1]=77;
+  promedio[2]=88;
+  promedio[3]=95;
+  promedio[4]=68;
+
+  Alumno(nombre, promedio);
+
+</script>
+
+</body>
+</html>

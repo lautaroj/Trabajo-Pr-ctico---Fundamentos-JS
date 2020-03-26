@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Respuesta 5</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+  //Escribir una función que muestre el reverso de un número:
+  function Invertir(numero)
+{ 
+  var inverso = 0;
+  var numero1 = numero;
+  
+  while(numero>0)
+  {
+    inverso = inverso * 10;
+    inverso = inverso + (numero % 10);
+    numero = parseInt(numero / 10);
+  }
+  
+  return inverso;
+}
+
+var numero = prompt("Ingrese un número:");
+numero = parseInt(numero);
+
+document.write(Invertir(numero));
+  
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Respuesta 10</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+  /* Escriba una función que acepte una cadena como parámetro 
+  y cuente el número de vocales dentro de esa cadena.*/
+function Vocales(frase)
+{    
+    frase = frase.split("");
+    var vocales = 0;
+    for (var x = 0; x<frase.length; x++ )
+    {
+        switch(frase[x])
+        {
+            case "a": vocales=vocales+1;
+                break;
+            case "A": vocales=vocales=vocales+1;
+                break;
+            case "e": vocales=vocales+1;
+                break;
+            case "E": vocales=vocales+1;
+                break;
+            case "i": vocales=vocales+1;
+                break;
+            case "I": vocales=vocales+1;
+                break;
+            case "o": vocales=vocales+1;
+                break;
+            case "O": vocales=vocales+1;
+                break;
+            case "u": vocales=vocales+1;
+                break;
+            case "U": vocales=vocales+1;
+                break;
+        }
+    }
+    
+    return vocales;
+
+}
+
+var frase = prompt("Ingrese una frase:");
+
+document.write("La frase es: "+frase+".  Tiene "+Vocales(frase)+" vocales.");
+
+  
+</script>
+
+</body>
+</html>

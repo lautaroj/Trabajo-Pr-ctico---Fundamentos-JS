@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Respuesta 6</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+  /*Escriba una función que acepte una cadena como parámetro y convierta la primera letra
+  de cada palabra de la cadena en mayúsculas.*/
+
+  function Mayuscula(frase)
+{
+    var letra = frase.split(" ");
+    for (var x = 0; x<letra.length; x++ )
+    {
+        var y = letra[x].charAt(0).toUpperCase();
+        letra[x] = y + letra[x].substr(1);
+    }
+    return letra.join(" ");
+}
+
+var frase = prompt("Ingrese una frase:");
+document.write(Mayuscula(frase));
+  
+</script>
+
+</body>
+</html>
