@@ -10,42 +10,45 @@
   //Partiendo de tres números, ordenarlos de mayor a menor y mostrar el resultado en un popup (alert).
 function Orden(x1, x2, x3)
 {
+    var respuesta = "";
     if(x1>x2 && x1>x3)
     {
-        document.write(x1+" ");
+        respuesta = respuesta +(x1+" ");
         if(x2>x3)
         {
-            document.write(x2+" "+x3);
+            respuesta = respuesta +(x2+" "+x3);
         }
         else
         {
-            document.write(x3+" "+x2);
+            respuesta = respuesta +(x3+" "+x2);
         }
     }
     else if(x2>x3)
     {
-        document.write(x2+" ");
+        respuesta = respuesta +(x2+" ");
         if(x1>x3)
         {
-            document.write(x1+" "+x3);
+            respuesta = respuesta +(x1+" "+x3);
         }
         else
         {
-            document.write(x3+" "+x1);
+            respuesta = respuesta +(x3+" "+x1);
         }
     }
     else
     {
-        document.write(x3+" ");
+        respuesta = respuesta +(x3+" ");
         if(x1>x2)
         {
-            document.write(x1+" "+x2);
+            respuesta = respuesta +(x1+" "+x2);
         }
         else
         {
-            document.write(x2+" "+x1);
+            respuesta = respuesta +(x2+" "+x1);
         }
     }
+
+    return respuesta;
 }
 
 var x1,x2,x3;
@@ -55,8 +58,7 @@ var x1,x2,x3;
   x2=parseInt(x2);
   x3=prompt('Ingrese el tercer valor:');
   x3=parseInt(x3);
-  document.write('El orden de menor a mayor de los valores es : ');
-  Orden(x1,x2,x3);
+  alert('El orden de mayor a menor de los valores es : '+Orden(x1,x2,x3));
   
 </script>
 
