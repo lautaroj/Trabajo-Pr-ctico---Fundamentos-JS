@@ -7,48 +7,27 @@
 <body>
 
 <script>
-  /* Escriba una función que acepte una cadena como parámetro 
-  y cuente el número de vocales dentro de esa cadena.*/
-function Vocales(frase)
-{    
-    frase = frase.split("");
-    var vocales = 0;
-    for (var x = 0; x<frase.length; x++ )
+  /*Escriba una función de JavaScript para extraer caracteres únicos de una cadena*/
+
+function Extraer(frase)
+{
+    var reemplazo = "";
+    for(var x = 0; x<frase.length; x++)
     {
-        switch(frase[x])
+        if(reemplazo.indexOf(frase.charAt(x))==-1)
         {
-            case "a": vocales=vocales+1;
-                break;
-            case "A": vocales=vocales=vocales+1;
-                break;
-            case "e": vocales=vocales+1;
-                break;
-            case "E": vocales=vocales+1;
-                break;
-            case "i": vocales=vocales+1;
-                break;
-            case "I": vocales=vocales+1;
-                break;
-            case "o": vocales=vocales+1;
-                break;
-            case "O": vocales=vocales+1;
-                break;
-            case "u": vocales=vocales+1;
-                break;
-            case "U": vocales=vocales+1;
-                break;
+            reemplazo += frase[x];    
         }
     }
-    
-    return vocales;
-
+    return reemplazo;
 }
 
 var frase = prompt("Ingrese una frase:");
+document.write("La frase era: "+frase+"<br>"+"Nueva frase: "+Extraer(frase));
 
-document.write("La frase es: "+frase+".  Tiene "+Vocales(frase)+" vocales.");
+/*Para realizar este ejercicio me guié de varias páginas de internet porque estuve bastante 
+sin saber cómo escribir la parte del IF. Después de leer algunas páginas lo entendí bien.*/
 
-  
 </script>
 
 </body>
